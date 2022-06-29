@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Orientation Sensor</string>
+
+    <string name="content_orientation_title">Orientation (degrees)</string>
+    <string name="content_magnetic_title">Magnetometer (uT)</string>
+    <string name="content_accelerometer_title">Accelerometer (m/s^2)</string>
+
+    <string name="x_axis_label">X axis</string>
+    <string name="y_axis_label">Y axis</string>
+    <string name="z_axis_label">Z axis</string>
+</resources>
