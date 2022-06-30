@@ -51,8 +51,6 @@ public class MainPresenter implements MainContract.Presenter {
     final float[] orientationAngles = new float[3];
 
     private void initSensorsListeners() {
-
-
         if (sensorMagneticEvenListener == null) {
             sensorMagneticEvenListener = new SensorEventListener() {
                 @Override
@@ -97,9 +95,9 @@ public class MainPresenter implements MainContract.Presenter {
         float[] orientation = SensorManager.getOrientation(rotationMatrix, orientationAngles);
 
         Log.d("ORIENTATION", "->"+orientation);
-        float zAngle = roundFloat(orientation[0]);
-        float xAngle = roundFloat(orientation[1]);
-        float yAngle = roundFloat(orientation[2]);
+        float zAngle = (float) (roundFloat((float) (Math.toDegrees(orientation[0]) + 360.0)) % 360.0);
+        float xAngle = (float) (roundFloat((float) (Math.toDegrees(orientation[1]) + 360.0)) % 360.0);;
+        float yAngle = (float) (roundFloat((float) (Math.toDegrees(orientation[2]) + 360.0)) % 360.0);;
         view.updateOrientationSensorDataChanged(xAngle, yAngle, zAngle);
     }
     private float roundFloat(float value) {

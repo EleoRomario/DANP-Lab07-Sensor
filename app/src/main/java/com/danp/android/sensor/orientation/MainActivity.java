@@ -55,13 +55,13 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         textOrientationYAxis.setText(String.valueOf(yAngle));
         textOrientationZAxis.setText(String.valueOf(zAngle));
         coordinateFrameView.setAngleZAxis(zAngle);
-        if(xAngle<0.0 && yAngle == 0.0 && zAngle == 0.0 ){
+        if(xAngle==270.0){
             textOrientation.setText("Vertical 1");
-        }else if(xAngle>0.0 && yAngle < 0.0 && zAngle < 0.0){
+        }else if(xAngle==90.0 ){
             textOrientation.setText("Vertical 2");
-        }else if(xAngle==0.0 && yAngle > 0.0 && zAngle > 0.0){
+        }else if(yAngle==90.0){
             textOrientation.setText("Horizontal 1");
-        }else if(xAngle==0.0 && yAngle < 0.0 && zAngle < 0.0){
+        }else if(yAngle==270.0){
             textOrientation.setText("Horizontal 2");
         }
     }
